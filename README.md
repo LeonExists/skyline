@@ -3,7 +3,7 @@ A weather TUI built while learning terminal UIs — because they just look incre
 
 ## Preview
 
-![Weather App Screenshot](assets/screenshots/weather-app.png)
+![Weather App Screenshot](assets/screenshots/weather-app.svg)
 
 *Enter your location to see weather information displayed in a sleek terminal interface*
 
