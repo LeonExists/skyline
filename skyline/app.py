@@ -23,7 +23,7 @@ class WeatherApp(App):
         location_widget = self.query_one(Location)
         location_widget.remove()
 
-        # mount weather widget with submitted location
+        # mount weather widget with the submitted location
         self.mount(Weather(message.location))
 
 
