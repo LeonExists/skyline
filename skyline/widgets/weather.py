@@ -1,6 +1,7 @@
 from textual.app import ComposeResult
 from textual.widget import Widget
-from textual.widgets import Label
+from textual.widgets import Label, Sparkline
+from textual.containers import Horizontal, Vertical
 
 
 class Weather(Widget):
@@ -9,7 +10,15 @@ class Weather(Widget):
         self.location = location
 
     def compose(self) -> ComposeResult:
-        yield Label(f"Weather for: {self.location}", id="title")
-        
-        yield Label("Temperature: Loading...", id="temperature")
-        yield Label("Conditions: Loading...", id="conditions")
+        with Horizontal():
+            with Vertical(id="main-weather") as main:
+                main.border_title = f"[bold]{self.location}[/bold]"
+                yield Label("72°F", id="temperature")
+                yield Label("Partly Cloudy", id="conditions")
+
+            with Vertical(id="weather-details"):
+                with Vertical(id="details-top") as top:
+                    top.border_title = "Details"
+
+                with Vertical(id="details-bottom") as bottom:
+                    bottom.border_title = "7-Day Forecast"

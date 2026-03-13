@@ -24,6 +24,84 @@ Location {
 #title {
     text-align: center;
     text-style: bold;
+
     width: 100%;
+    
     margin-bottom: 1;
 }
+
+
+# Weather Widget
+Weather {
+    width: 90;
+    height: 24;
+
+    padding: 0;
+}
+
+Weather Horizontal {
+    width: 100%;
+    height: 100%;
+    padding: 1;
+}
+
+#main-weather {
+    width: 2fr;
+    height: 100%;
+
+    content-align: center middle;
+
+    background: $boost;
+    border: round $primary;
+    border-title-align: left;
+
+    padding: 2 4;
+}
+
+#weather-details {
+    width: 1fr;
+    height: 100%;
+    margin-left: 1;
+}
+
+#details-top {
+    height: 1fr;
+
+    content-align: center middle;
+
+    background: $surface;
+    border: round $accent;
+    border-title-align: left;
+
+    padding: 2 3;
+}
+
+#details-bottom {
+    height: 1fr;
+
+    background: $surface;
+    border: round $accent;
+    border-title-align: left;
+
+    padding: 1 2;
+    margin-top: 1;
+}
+
+# Weather
+#temperature {
+    text-style: bold;
+    text-align: center;
+
+    width: 100%;
+    color: $accent;
+
+    margin: 1 0;
+}
+
+#conditions {
+    text-align: center;
+    width: 100%;
+    text-style: italic;
+    color: $text-muted;
+}
+
