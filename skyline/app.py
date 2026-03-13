@@ -2,7 +2,7 @@ from textual.app import App, ComposeResult
 from textual.widgets import Footer, Header
 
 from widgets.location import Location
-
+from widgets.weather import Weather
 
 
 class WeatherApp(App):
@@ -16,6 +16,15 @@ class WeatherApp(App):
         yield Location()
 
         yield Footer()
+
+
+    def on_location_location_submitted(self, message: Location.LocationSubmitted) -> None:
+        # remove location widget
+        location_widget = self.query_one(Location)
+        location_widget.remove()
+
+        # mount weather widget with submitted location
+        self.mount(Weather(message.location))
 
 
     def action_toggle_dark(self) -> None:
