@@ -1,0 +1,15 @@
+# Location Widget
+#container {
+    align: center middle;
+
+    padding: 2 4;
+}
+
+#container #title {
+    text-align: center;
+    width: 100%;
+}
+
+#container #location {
+    align: center middle;
+}
