@@ -1,15 +1,29 @@
+# General
+Screen {
+    align: center middle;
+}
+
+
+
 # Location Widget
-#container {
-    align: center middle;
-
-    padding: 2 4;
+Location {
+    width: 44;
+    height: 12;
+    
+    content-align: center middle;
+    
+    padding: 1 2;
+    
+    background: $panel;
+    
+    border: $secondary tall;
+    
+    color: $text;
 }
 
-#container #title {
+#title {
     text-align: center;
+    text-style: bold;
     width: 100%;
-}
-
-#container #location {
-    align: center middle;
+    margin-bottom: 1;
 }
