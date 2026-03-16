@@ -4,20 +4,19 @@ Screen {
 }
 
 
-
 # Location Widget
 Location {
     width: 44;
     height: 12;
-    
+
     content-align: center middle;
-    
+
     padding: 1 2;
-    
+
     background: $panel;
-    
+
     border: $secondary tall;
-    
+
     color: $text;
 }
 
@@ -26,15 +25,15 @@ Location {
     text-style: bold;
 
     width: 100%;
-    
+
     margin-bottom: 1;
 }
 
 
 # Weather Widget
 Weather {
-    width: 90;
-    height: 24;
+    width: 100;
+    height: 34;
 
     padding: 0;
 }
@@ -65,15 +64,14 @@ Weather Horizontal {
 }
 
 #details-top {
-    height: 1fr;
-
-    content-align: center middle;
+    height: auto;
+    max-height: 9;
 
     background: $surface;
     border: round $accent;
     border-title-align: left;
 
-    padding: 2 3;
+    padding: 1 2;
 }
 
 #details-bottom {
@@ -85,9 +83,21 @@ Weather Horizontal {
 
     padding: 1 2;
     margin-top: 1;
+    overflow-y: auto;
 }
 
-# Weather
+#details-sparkline {
+    height: 5;
+
+    background: $surface;
+    border: round $accent;
+    border-title-align: left;
+
+    padding: 0 1;
+    margin-top: 1;
+}
+
+# Temperature
 #temperature {
     text-style: bold;
     text-align: center;
@@ -105,3 +115,27 @@ Weather Horizontal {
     color: $text-muted;
 }
 
+# Loading
+#loading {
+    height: 3;
+}
+
+# Detail labels
+#detail-feels-like,
+#detail-humidity,
+#detail-wind,
+#detail-uv,
+#detail-precip {
+    width: 100%;
+}
+
+# Forecast
+#forecast-text {
+    width: 100%;
+}
+
+# Sparkline
+#temp-sparkline {
+    width: 100%;
+    height: 3;
+}
